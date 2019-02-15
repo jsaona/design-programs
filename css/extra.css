@@ -1,0 +1,375 @@
+/*FONTS*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:600,700');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  background-color: #2E2E2E;
+  color: white;
+}
+
+/*NAV BAR*/
+nav .current {
+  background-color:#2E2E2E;
+  
+}
+
+#cssmenu {
+  position: relative;
+  height: 44px;
+  background: #2b2f3a;
+  width: auto;
+  margin-bottom: 20px;
+}
+#cssmenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+}
+#cssmenu > ul {
+  position: relative;
+  display: block;
+  background: #2690d4;
+  width: 100%;
+}
+#cssmenu:after,
+#cssmenu > ul:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+#cssmenu.align-right > ul > li {
+  float: right;
+}
+#cssmenu.align-center ul {
+  text-align: center;
+}
+#cssmenu.align-center ul ul {
+  text-align: left;
+}
+#cssmenu > ul > li {
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  padding: 0;
+}
+#cssmenu > ul > #menu-button {
+  display: none;
+}
+#cssmenu ul li a {
+  display: block;
+  font-family: Helvetica, sans-serif;
+  text-decoration: none;
+}
+#cssmenu > ul > li > a {
+  font-size: 14px;
+  font-weight: bold;
+  padding: 15px 20px;
+  color: white;
+  text-transform: uppercase;
+  -webkit-transition: color 0.25s ease-out;
+  -moz-transition: color 0.25s ease-out;
+  -ms-transition: color 0.25s ease-out;
+  -o-transition: color 0.25s ease-out;
+  transition: color 0.25s ease-out;
+}
+#cssmenu > ul > li.has-sub > a {
+  padding-right: 32px;
+}
+#cssmenu > ul > li:hover > a {
+  color: #ffffff;
+  background-color: #2E2E2E;
+  transition: 0.5s ease;
+
+}
+#cssmenu li.has-sub::after {
+  display: block;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+#cssmenu > ul > li.has-sub::after {
+  right: 10px;
+  top: 20px;
+  border: 5px solid transparent;
+  border-top-color: #7a8189;
+}
+
+#indicatorContainer {
+  position: absolute;
+  height: 12px;
+  width: 100%;
+  bottom: 0px;
+  overflow: hidden;
+  z-index: -1;
+}
+#pIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  z-index: -2;
+  -webkit-transition: left .25s ease;
+  -moz-transition: left .25s ease;
+  -ms-transition: left .25s ease;
+  -o-transition: left .25s ease;
+  transition: left .25s ease;
+}
+#cIndicator {
+  position: absolute;
+  height: 0;
+  width: 100%;
+  border: 12px solid transparent;
+  border-top-color: #2b2f3a;
+  top: -12px;
+  right: 100%;
+  z-index: -2;
+}
+#cssmenu ul ul {
+  position: absolute;
+  left: -9999px;
+  top: 70px;
+  opacity: 0;
+  -webkit-transition: opacity .3s ease, top .25s ease;
+  -moz-transition: opacity .3s ease, top .25s ease;
+  -ms-transition: opacity .3s ease, top .25s ease;
+  -o-transition: opacity .3s ease, top .25s ease;
+  transition: opacity .3s ease, top .25s ease;
+  z-index: 1000;
+}
+#cssmenu ul ul ul {
+  top: 37px;
+  padding-left: 5px;
+}
+#cssmenu ul ul li {
+  position: relative;
+}
+#cssmenu > ul > li:hover > ul {
+  left: auto;
+  top: 44px;
+  opacity: 1;
+}
+#cssmenu.align-right > ul > li:hover > ul {
+  left: auto;
+  right: 0;
+  opacity: 1;
+}
+#cssmenu ul ul li:hover > ul {
+  left: 170px;
+  top: 0;
+  opacity: 1;
+}
+#cssmenu.align-right ul ul li:hover > ul {
+  left: auto;
+  right: 170px;
+  top: 0;
+  opacity: 1;
+  padding-right: 5px;
+}
+#cssmenu ul ul li a {
+  width: 130px;
+  border-bottom: 1px solid #eeeeee;
+  padding: 10px 20px;
+  font-size: 12px;
+  color: #9ea2a5;
+  background: #ffffff;
+  -webkit-transition: all .35s ease;
+  -moz-transition: all .35s ease;
+  -ms-transition: all .35s ease;
+  -o-transition: all .35s ease;
+  transition: all .35s ease;
+}
+#cssmenu.align-right ul ul li a {
+  text-align: right;
+}
+
+#cssmenu ul ul li:last-child > a,
+#cssmenu ul ul li.last > a {
+  border-bottom: 0;
+}
+#cssmenu > ul > li > ul::after {
+  content: '';
+  border: 6px solid transparent;
+  width: 0;
+  height: 0;
+  border-bottom-color: #ffffff;
+  position: absolute;
+  top: -12px;
+  left: 30px;
+}
+
+img.designpic {
+  width: 70%;
+  height: auto;
+}
+
+
+h1 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: white;
+    padding: 20px;
+}
+
+#typed {
+    font-size: 40px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+h1 .color {
+  color: #2E2E2E;
+}
+
+h2, h3 {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+    padding: 10px;
+}
+
+h3 {
+  color: #2690d4;
+  padding: 13px;
+  padding-left: 0px;
+}
+
+h3.follow {
+  font-size: 25px;
+}
+
+p {
+    font-family: Lato,Helvetica,Arial,sans-serif;
+    font-size: 1.05em;
+}
+
+a.link {
+  color: #969697;
+  text-decoration: none;
+  font-family: Lato,Helvetica,Arial,sans-serif;
+  padding: 10px;
+  display: inline-block;
+}
+
+a.link:hover {
+  color: white;
+  transition: 0.5s ease;
+  background-color: #2690d4;
+  border: 2px solid #2690d4;
+  border-radius: 25px;
+  padding: 8px;
+
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.col-3 {
+    width: 27%;
+    float: left;
+    margin: 30px;
+    height: 450px;
+
+}
+
+.social {
+    padding: 7%;
+    font-size: 2.5em;
+    text-align: center;
+}
+
+.content-title {
+  color: white;
+  text-decoration: underline;
+  padding: 15px;
+}
+
+ #section .box {
+        padding: 2em;
+        text-align: center;
+        color: white;
+        background: #2E2E2E;
+    }
+
+    #section .box:first-child {
+        background: #2690d4;
+        color: white;
+    }
+
+/*Header*/
+#showcase .bg-image {
+        position: absolute;
+        background: #333 url(https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 450px;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    #showcase h1 {
+        padding-top: 100px;
+        padding-bottom: 0;
+    }
+
+    #showcase .content-wrap,
+    #section-a .content-wrap {
+        padding: 180px 1.5em;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
