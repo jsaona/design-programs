@@ -247,6 +247,8 @@ h3 {
   color: #2690d4;
   padding: 13px;
   padding-left: 0px;
+  font-size: 23px;
+
 }
 
 h3.follow {
@@ -333,7 +335,7 @@ a.link:hover {
 
     #showcase .content-wrap,
     #section-a .content-wrap {
-        padding: 180px 1.5em;
+        padding: 162px 1.5em;
         text-align: center;
     }
 
